@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;1,200&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+          -45deg, 
+          rgba(59,173,227,1) 0%, 
+          rgba(87,111,230,1) 25%, 
+          rgba(152,68,183,1) 51%, 
+          rgba(255,53,127,1) 100%
+    );  
+    animation: AnimateBG 20s ease infinite;
+  }
+  
+  @keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+.card {
+    width: 320px;
+    height: 400px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+   
+}
+
+.profile {
+    margin-top: 35px;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    border: 5px solid rgb(183, 0, 255);
+    border-style: inset;
+    user-select: none;
+
+}
+
+
+
+.name {
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-style: oblique;
+    font-weight: 650;
+    user-select: none;
+    
+}
+
+.desc {
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 300px;
+    margin-top: 5px;
+    user-select: none;
+}
+
+.icons {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    background-color:  rgba(0, 0, 0, 0.146);
+    justify-content: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; 
+    margin:6px;
+    transition:0.3s ease-in-out;
+    user-select: none;
+}
+
+.link:hover {
+   font-size: 15px;
+  opacity: 0.8;
+  color: rgb(176, 91, 255);
+}
+
+@media screen and (max-width: 320px) {
+    .card {
+        width: 200px;
+        height: 300px;
+        background-color: rgb(37, 37, 37);
+        border-radius: 10px
+    }
+
+    .profile {
+        width: 75px;
+        height: 75px;
+    }
+    .name {
+        font-size: 13px;
+    }
+    
+    .desc {
+        margin-top: 4px;
+        font-size: 10px;
+    }
+
+    .icons {
+        margin-top: 50px;
+    }
+    .link {
+     font-size: 10px;
+    }
+    
+    
+}
